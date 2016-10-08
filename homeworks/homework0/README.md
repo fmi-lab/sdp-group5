@@ -1,4 +1,4 @@
-### 06.10.2016
+### 08.10.2016
 
 **Deadline:** ` 12.10.2016`
 
@@ -15,7 +15,7 @@ Implement a template vector with the following functionalities provided for the 
 * Check out if the vector is empty
 * Check out the size of the vector
 * Check out the capacity of the vector
-* Check out and/or change an element from the vector by a given index. (operator [](...))
+* Check out and/or change an element from the vector by a given index. (operator [])
 * Check out and/or change an element from the vector by a given *valid* index. (at(...) throw out_of_range exception if the index is invalid)
 * Check out and/or change the first element of the vector
 * Check out and/or change the last element of the vector
@@ -45,3 +45,5 @@ The queue should have similiar methods:
 * Empty check
 * Method returning the size of the queue
  
+Should you use pointers or just an dynamic array to implement the data structures from problem 1 is your decision. You should research and choose the best way.
+For both problem 0 and 1 it is recommended to name the member functions similiar(or the same) as their counterparts in the standart library.
