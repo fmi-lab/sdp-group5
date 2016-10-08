@@ -28,8 +28,8 @@ Implement a *template* stack or queue based on the parity of your faculty number
 * Even numbers implement stack
 * Uneven numbers implement queue
 
-A user of the stack should have some the ability to:
-* Construct, copy and desctruct a stack
+A user of the stack should have the ability to:
+* Construct, copy and destruct a stack
 * Add element to the top of the stack (push)
 * Remove element from the top (pop)
 * Check the top element (top) (const and non-const versions)
