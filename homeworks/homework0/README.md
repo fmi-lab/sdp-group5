@@ -46,5 +46,5 @@ The queue should have similiar methods:
 * Method returning the size of the queue
  
 Should you use pointers or just an dynamic array to implement the data structures from problem 1 is your decision. You should research and choose the best way.  
-For both problem 0 and 1 it is recommended to name the member functions similiar(or the same) as their counterparts in the standart library.  
-If you want more details about some member function just check the one in the standart library again.
+For both problem 0 and 1 it is recommended to name the member functions similiar(or the same) as their counterparts in the standard library.  
+If you want more details about some member function just check the one in the standard library again.
