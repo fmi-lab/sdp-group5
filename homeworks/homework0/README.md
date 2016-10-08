@@ -19,7 +19,6 @@ Implement a template vector with the following functionalities provided for the 
 * Check out and/or change an element from the vector by a given *valid* index. (at(...) throw out_of_range exception if the index is invalid)
 * Check out and/or change the first element of the vector
 * Check out and/or change the last element of the vector
-```
 
 ---
 
