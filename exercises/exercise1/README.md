@@ -7,22 +7,22 @@ Output the length of one of the shortest paths (if there are more than one) and 
 
 Example Matrix:  
 
-6x6
-.....*
-***.**
-....**
-*....*
-***..*
-***...
+6x6  
+.....*  
+***.**  
+....**  
+*....*  
+***..*  
+***...  
 
 Example Output:  
 
-11
-####.*
-***#**
-*..#**
-*..##*
-***.#*
-***.##
+11  
+####.*  
+***#**  
+*..#**  
+*..##*  
+***.#*  
+***.##  
 
 ---
