@@ -63,12 +63,12 @@ namespace sdplib {
 	}
 	template<typename T>
 	vector<T>& vector<T>::operator=(vector<T> other) {
-		sdplib::swap(*this, other);
+		swap(*this, other);
 		return *this;
 	}
 	template<typename T>
 	vector<T>::vector(vector<T>&& other) : vector{}{
-		sdplib::swap(*this, other);
+		swap(*this, other);
 	}
 	template<typename T>
 	vector<T>::vector(std::initializer_list<T> init) : arr{ new T[init.size()] }, sz{init.size()},
