@@ -1,8 +1,10 @@
 
 #### Useful links for Stacks, Queues, DFS, BFS and STL (Standart Library):   
-[Stack](https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29)   
-[STL Stack](http://www.cplusplus.com/reference/stack/stack/)   
-[Queue](http://informatika.bg/lectures/queue)   
+[Stack](https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29)  
+[STL Stack](http://www.cplusplus.com/reference/stack/stack/)    
+[DFS](http://www.algolist.net/Algorithms/Graph/Undirected/Depth-first_search)   
+[Queue](http://informatika.bg/lectures/queue)    
+[BFS](https://en.wikipedia.org/wiki/Breadth-first_search)   
 [STL Queue](http://en.cppreference.com/w/cpp/container/queue)   
 [STL Lecture !](http://informatika.bg/lectures/STL)   
 
