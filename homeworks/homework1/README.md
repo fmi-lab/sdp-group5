@@ -10,14 +10,15 @@ Write a program, which finds if person X can convey a message to person Y and ho
 
 **Input:**   
 *n* - the number of people from the group
-The next n lines have the following format: *Number_of_phone_numbers phone1 phone2 phone3*       
+The next n lines have the following format:          
+*Number_of_phone_numbers phone1 phone2 phone3*         
 The phone numbers in the i-th line belong to the i-th person from the group.   
 After n lines there is one last one with two numbers in the range [0,n-1], which gives you between which two people you will convey the message.
 
-**Output:  **
+**Output:**
 The number of necessary phone calls in order for the message to be conveyed or -1 if it is impossible.
 
-Example:  
+**Example:**  
 
 5 (n=5)
 2 3 4 (person 0 has 2 tel. nums - 3's number and 4's number)   
@@ -39,7 +40,7 @@ The expression can contain real number, variables, operators +, -, , /, %, =, pa
 The program should check if the parenthesis in the expression are balanced 
 (for every opening parenthesis there is corresponding closing one in the right place, there isn't closing parenthesis without opening ones and so on)
 
-Examples:   
+**Examples:**      
 
 (x+1)\*5 = [(2.5+3.5)\*(-6)-5]\*0.1 -> balanced    
 (2+3)\*5\*[10-(7+8-0.5+9]) -> unbalanced    
@@ -54,6 +55,6 @@ Examples:
 
 Write a program which detects and removes duplicate parenthesis in an expression.
 
-Example:   
+**Example:**   
 
 ((a+b)*((c+d))) ->  ((a+b)*(c+d))
