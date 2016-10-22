@@ -15,12 +15,12 @@ The next n lines have the following format:
 The phone numbers in the i-th line belong to the i-th person from the group.   
 After n lines there is one last one with two numbers in the range [0,n-1], which gives you between which two people you will convey the message.
 
-**Output:**
+**Output:**   
 The number of necessary phone calls in order for the message to be conveyed or -1 if it is impossible.
 
 **Example:**  
 
-5 (n=5)
+5 (n=5)   
 2 3 4 (person 0 has 2 tel. nums - 3's number and 4's number)   
 1 0 (person 1 has 1 tel. num - 0's number)   
 1 1 (person 2 has 1 tel. num - 1's number)   
@@ -29,7 +29,8 @@ The number of necessary phone calls in order for the message to be conveyed or -
 
 1 2 (person Х=1, person У=2)   
    
-**Output:** 3 (1->0->4->2 or 1->0->3->2)     
+**Output:** 3   
+(1->0->4->2 or 1->0->3->2)     
 
 ---
 
@@ -57,4 +58,4 @@ Write a program which detects and removes duplicate parenthesis in an expression
 
 **Example:**   
 
-((a+b)*((c+d))) ->  ((a+b)*(c+d))
+((a+b)\*((c+d))) ->  ((a+b)\*(c+d))
