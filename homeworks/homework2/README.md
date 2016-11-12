@@ -1,8 +1,8 @@
 ### 12.11.2016
 
-**Deadline:** ` 19.11.2016`  
+**Deadline:** ` 20.11.2016`  
 **Use the tree implemented in the lectures for the tasks that don't specify otherwise**  
-d
+
 [Upload Link](#)
 
 #### Problem 0 (3 Points)
@@ -27,16 +27,16 @@ The solutions with better complexities and faster runtime will get more points.
 #### Problem 2 (4 Points)
 
 Write a member-function which prints the columns of a tree in order with the nodes in each column printed top to bottom.
+When two nodes of one column share the same height e.g. 7 and 9 in Example 1, you may print them in either order.  
 
 [Example1](https://gyazo.com/352bd12945606847aadf9c3c646cb78c)  
-When two nodes of one column share the same height e.g. 7 and 9 in Example 1, you may print them in either order.
 
 [Example2](https://gyazo.com/6d994248aa637fc96f27c587f4d9ba8f)  
 
 ---  
 
 
-#### BONUS (10 Points)
+#### BONUS (5 Points)
 
 Implement a member-function "balance" which checks if the BST(Binary Search Tree) is balanced and returns true/false.   
 If the tree isn't balanced then the function balances it.
