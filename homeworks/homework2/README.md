@@ -18,6 +18,7 @@ For these methods you don't need helper-functions in order to implement them.
 
 The diameter of a tree is the number of nodes on the longest path between two leaves in the tree.  
 Write a member-function for the class BTree, which find the diameter of the tree and returns it.  
+Feel free to add data to the tree or to the nodes to help you with the solution.  
 The solutions with better complexities and faster runtime will get more points.  
 For this function there is no need for the tree to be BST.  
 
