@@ -2,8 +2,8 @@
 
 ### Exercise5
 * We studied some binary tree problems and their solutions.  
-* We gained an understanding of the AVL Tree and Red-Black Tree datastructures. Their common properties and the aspects in which they differ. We also talked about some ideas for implementing them.  
-* We saw an example of how to generate random numbers and measure the perfomance of our programs. Also we understood the meaning of the complexities of algorithms in our program.  
+* We gained an understanding of the AVL Tree and Red-Black Tree data structures. Their common properties and the aspects in which they differ. We also talked about some ideas for implementing them.  
+* We saw an example of how to generate random numbers and measure the perfomance of our program. Also we understood the meaning of the complexities of algorithms in practice.  
 
 Links we used for this exercise: 
 
