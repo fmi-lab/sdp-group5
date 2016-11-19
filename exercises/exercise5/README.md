@@ -5,10 +5,15 @@
 * We gained an understanding of the AVL Tree and Red-Black Tree data structures. Their common properties and the aspects in which they differ. We also talked about some ideas for implementing them.  
 * We saw an example of how to generate random numbers and measure the perfomance of our program. Also we understood the meaning of the complexities of algorithms in practice.  
 
-Links we used for this exercise: 
+Links we used for this exercise:  
 
 * [AVL](https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm)
 * [AVL-Wiki](https://en.wikipedia.org/wiki/AVL_tree)
 * [AVL-Visualization](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
 * [RBT-Wiki](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
 * [RBT-Visualization](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)
+
+Links to the files from the exercise:  
+
+* [Tree problems](https://github.com/fmi-lab/sdp-group5/blob/master/exercises/exercise5/tree.cpp)
+* [Execution Time Measuring](https://github.com/fmi-lab/sdp-group5/blob/master/exercises/exercise5/ExecutionTimes.cpp)
