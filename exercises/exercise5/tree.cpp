@@ -81,8 +81,8 @@ public:
 			assert(operations.top().first == OPER_PRINT);
 			assert(operations.top().second != nullptr);
 
-			//сигурни сме, че на върха на стека
-			//стои число "за печатане"
+			//Г±ГЁГЈГіГ°Г­ГЁ Г±Г¬ГҐ, Г·ГҐ Г­Г  ГўГєГ°ГµГ  Г­Г  Г±ГІГҐГЄГ 
+			//Г±ГІГ®ГЁ Г·ГЁГ±Г«Г® "Г§Г  ГЇГҐГ·Г ГІГ Г­ГҐ"
 
 			return operations.top().second->data;
 
@@ -106,7 +106,7 @@ public:
 			if (other.operations.empty())
 				return !operations.empty();
 
-			//и двете са непразни
+			//ГЁ Г¤ГўГҐГІГҐ Г±Г  Г­ГҐГЇГ°Г Г§Г­ГЁ
 
 			return operations.top() != other.operations.top();
 		}
@@ -159,6 +159,7 @@ private:
 
 
 	static Node<T>* copyTree(const Node<T> *subTreeRoot);
+	static Node<T>* deletedBOT(const Node<T>*subTreeRoot, const T& x);
 
 	void insertBOT(Node<T>*&subTreeRoot, const T& x);
 
@@ -166,11 +167,11 @@ private:
 
 	void deleteElement(Node<T> *&subTreeRoot, const T&x);
 
-	T minelement(Node<T> *subTreeRoot) const;
+	static T minelement(Node<T> *subTreeRoot);
 
 	/*
-	//преподлогаме, че имеме T::operator +
-	//n - колко елемента ОСТАВА да сумираме
+	//ГЇГ°ГҐГЇГ®Г¤Г«Г®ГЈГ Г¬ГҐ, Г·ГҐ ГЁГ¬ГҐГ¬ГҐ T::operator +
+	//n - ГЄГ®Г«ГЄГ® ГҐГ«ГҐГ¬ГҐГ­ГІГ  ГЋГ‘Г’ГЂГ‚ГЂ Г¤Г  Г±ГіГ¬ГЁГ°Г Г¬ГҐ
 	int firstHalfHelper (Node<int> *subTreeRoot, int &n)
 	{
 
@@ -202,9 +203,9 @@ public:
 	BTree(const BTree<T> &other);
 
 	/*
-	ако разглеждаме елементи на ДНД като
-	редица от числа, подредени в нарастващ ред,
-	да се намери сумата на първата половината на редицата
+	Г ГЄГ® Г°Г Г§ГЈГ«ГҐГ¦Г¤Г Г¬ГҐ ГҐГ«ГҐГ¬ГҐГ­ГІГЁ Г­Г  Г„ГЌГ„ ГЄГ ГІГ®
+	Г°ГҐГ¤ГЁГ¶Г  Г®ГІ Г·ГЁГ±Г«Г , ГЇГ®Г¤Г°ГҐГ¤ГҐГ­ГЁ Гў Г­Г Г°Г Г±ГІГўГ Г№ Г°ГҐГ¤,
+	Г¤Г  Г±ГҐ Г­Г Г¬ГҐГ°ГЁ Г±ГіГ¬Г ГІГ  Г­Г  ГЇГєГ°ГўГ ГІГ  ГЇГ®Г«Г®ГўГЁГ­Г ГІГ  Г­Г  Г°ГҐГ¤ГЁГ¶Г ГІГ 
 
 	T firstHalfSum ();
 	T secondHalfSum ();
@@ -276,18 +277,18 @@ void BTree<T>::LeftRightRootIterator::unwind()
 
 	}
 
-	//стекът е или празен или на върха му има операция PRINT
+	//Г±ГІГҐГЄГєГІ ГҐ ГЁГ«ГЁ ГЇГ°Г Г§ГҐГ­ ГЁГ«ГЁ Г­Г  ГўГєГ°ГµГ  Г¬Гі ГЁГ¬Г  Г®ГЇГҐГ°Г Г¶ГЁГї PRINT
 }
 
 
 template<class T>
 void BTree<T>::deleteElement(Node<T> *&subTreeRoot, const T&x)
 {
-	//триене от празно дърво
+	//ГІГ°ГЁГҐГ­ГҐ Г®ГІ ГЇГ°Г Г§Г­Г® Г¤ГєГ°ГўГ®
 	if (subTreeRoot == nullptr)
 		return;
 
-	//триене от листо
+	//ГІГ°ГЁГҐГ­ГҐ Г®ГІ Г«ГЁГ±ГІГ®
 	if (subTreeRoot->data == x &&
 		subTreeRoot->left == nullptr &&
 		subTreeRoot->right == nullptr)
@@ -298,25 +299,25 @@ void BTree<T>::deleteElement(Node<T> *&subTreeRoot, const T&x)
 		return;
 	}
 
-	//триене от лявото поддърво
+	//ГІГ°ГЁГҐГ­ГҐ Г®ГІ Г«ГїГўГ®ГІГ® ГЇГ®Г¤Г¤ГєГ°ГўГ®
 	if (x < subTreeRoot->data)
 	{
 		deleteElement(subTreeRoot->left, x);
 		return;
 	}
 
-	//триене от дясното поддърво
+	//ГІГ°ГЁГҐГ­ГҐ Г®ГІ Г¤ГїГ±Г­Г®ГІГ® ГЇГ®Г¤Г¤ГєГ°ГўГ®
 	if (x > subTreeRoot->data)
 	{
 		deleteElement(subTreeRoot->right, x);
 		return;
 	}
 
-	//вече сме сигурни, че трием корена!
-	//освен това сме сигурни, че корена има ПОНЕ ЕДИН
-	//наследник
+	//ГўГҐГ·ГҐ Г±Г¬ГҐ Г±ГЁГЈГіГ°Г­ГЁ, Г·ГҐ ГІГ°ГЁГҐГ¬ ГЄГ®Г°ГҐГ­Г !
+	//Г®Г±ГўГҐГ­ ГІГ®ГўГ  Г±Г¬ГҐ Г±ГЁГЈГіГ°Г­ГЁ, Г·ГҐ ГЄГ®Г°ГҐГ­Г  ГЁГ¬Г  ГЏГЋГЌГ… Г…Г„Г€ГЌ
+	//Г­Г Г±Г«ГҐГ¤Г­ГЁГЄ
 
-	//триене на корен само с 1 наследник
+	//ГІГ°ГЁГҐГ­ГҐ Г­Г  ГЄГ®Г°ГҐГ­ Г±Г Г¬Г® Г± 1 Г­Г Г±Г«ГҐГ¤Г­ГЁГЄ
 	if (subTreeRoot->right == nullptr)
 	{
 		Node<T> *tmp = subTreeRoot;
@@ -325,8 +326,8 @@ void BTree<T>::deleteElement(Node<T> *&subTreeRoot, const T&x)
 		return;
 	}
 
-	//триене на корен само с 1 наследник
-	//този случй може да не се разглежда
+	//ГІГ°ГЁГҐГ­ГҐ Г­Г  ГЄГ®Г°ГҐГ­ Г±Г Г¬Г® Г± 1 Г­Г Г±Г«ГҐГ¤Г­ГЁГЄ
+	//ГІГ®Г§ГЁ Г±Г«ГіГ·Г© Г¬Г®Г¦ГҐ Г¤Г  Г­ГҐ Г±ГҐ Г°Г Г§ГЈГ«ГҐГ¦Г¤Г 
 	if (subTreeRoot->left == nullptr)
 	{
 		Node<T> *tmp = subTreeRoot;
@@ -336,8 +337,8 @@ void BTree<T>::deleteElement(Node<T> *&subTreeRoot, const T&x)
 	}
 
 
-	//триене на корена
-	//вече сме сигурни, че корена има точно два наследника
+	//ГІГ°ГЁГҐГ­ГҐ Г­Г  ГЄГ®Г°ГҐГ­Г 
+	//ГўГҐГ·ГҐ Г±Г¬ГҐ Г±ГЁГЈГіГ°Г­ГЁ, Г·ГҐ ГЄГ®Г°ГҐГ­Г  ГЁГ¬Г  ГІГ®Г·Г­Г® Г¤ГўГ  Г­Г Г±Г«ГҐГ¤Г­ГЁГЄГ 
 	T minel = minelement(subTreeRoot->right);
 	subTreeRoot->data = minel;
 	deleteElement(subTreeRoot->right, minel);
@@ -929,6 +930,89 @@ int BTree<char>::calculate(Node<char>* node) const
 	assert(isdigit(node->data));
 	return node->data - '0';
 }
+
+template<class T>
+BTree<T> BTree<T>::deletedBOT(const T& x) const
+{
+	BTree<T> result;
+	result.root = deletedBOT(root, x);
+
+	return result;
+}
+
+/*DeletedBOT using copyTree
+
+template<class T>
+Node<T>* BTree<T>::deletedBOT(const Node<T>*subTreeRoot, const T& x)
+{
+	if (subTreeRoot == nullptr)
+	{
+		return nullptr;
+	}
+
+	if (subTreeRoot->data < x)
+	{
+		return new Node<T>(subTreeRoot->data,
+			copyTree(subTreeRoot->left),
+			deletedBOT(subTreeRoot->right, x));
+
+	}
+    if(x < subTreeRoot->data)
+	{
+	    return new Node<T>(subTreeRoot->data,
+            deletedBOT(subTreeRoot->left, x),
+            copyTree(subTreeRoot->right));
+	}
+
+	if(subTreeRoot->right == nullptr)
+    {
+        return copyTree(subTreeRoot->left);
+    }
+
+    if(subTreeRoot->left == nullptr)
+    {
+        return copyTree(subTreeRoot->right);
+    }
+
+    T minEl = minelement(subTreeRoot->right);
+    return new Node<T>(minEl,
+            copyTree(subTreeRoot->left),
+            deletedBOT(subTreeRoot->right, minEl));
+
+}
+*/
+template<class T>
+Node<T>* BTree<T>::deletedBOT(const Node<T>*subTreeRoot, const T& x)
+{
+	if (subTreeRoot == nullptr)
+	{
+		return nullptr;
+	}
+
+	if (subTreeRoot->data < x || x < subTreeRoot->data)
+	{
+		return new Node<T>(subTreeRoot->data,
+			deletedBOT(subTreeRoot->left, x),
+			deletedBOT(subTreeRoot->right, x));
+
+	}
+
+	if(subTreeRoot->right == nullptr)
+    {
+        //Delete all elements = x in subTreeRoot->left
+        //return deletedBOT(subTreeRoot->left, x);
+
+        //Copy subTreeRoot->left
+        return deletedBOT(subTreeRoot->left, x+1);
+    }
+
+    T minEl = minelement(subTreeRoot->right);
+    return new Node<T>(minEl,
+            deletedBOT(subTreeRoot->left, minEl),
+            deletedBOT(subTreeRoot->right, minEl));
+
+}
+
 
 int calculate(const BTree<char>& exprTree) {
 	using op = BTree<char>::Operations;
