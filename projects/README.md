@@ -24,7 +24,7 @@ Tom and Jerry - Vasko, Tedi T, Tedi P
 
 Max points you can earn without bonuses: 40  
   
-Max points with BONUSES : 55 
+Max points with BONUSES : *60* 
 
 Deadline: 07.01.2017  
 
