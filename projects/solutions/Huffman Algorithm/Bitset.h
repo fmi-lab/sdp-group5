@@ -26,9 +26,7 @@ public:
   }
 
   explicit Bitset(FILE *in) {
-    if (!in) {
-      return;
-    }
+    assert(in);
     fread(&bitSize, sizeof(bitSize), 1, in);
     blockSize = ceil(bitSize / bitsBTf());
     bitset = new blockType[blockSize];
