@@ -1,0 +1,9 @@
+NDK Serdika 10 Bulgaria 85 Levski 60 Hemus 30
+Bulgaria JBaucher 100
+Hemus NDK 20 Levski 70 JBaucher 40
+Serdika NDK 10 Levski 70
+Levski Popa 40 Grafa 60 NDK 50
+Popa Serdika 50
+Grafa Seminariqta 72 Levski 50
+JBaucher Hladilnika 120 Hemus 20 Studentski 140 NDK 90 Grafa 100
+Seminariqta JBaucher 50
